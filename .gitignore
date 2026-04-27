@@ -39,9 +39,10 @@ htmlcov/
 .eggs/
 
 # Data files (if they're generated)
-*.csv
-*.ttl
-*.owl
+# Except keep project-specific semantic web files
+!data/*.csv
+!ontology/*.owl
+!products_data.ttl
 
 # Backup files
 *.bak

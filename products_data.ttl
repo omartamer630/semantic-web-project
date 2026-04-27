@@ -1,0 +1,277 @@
+@prefix pc: <http://www.semanticweb.org/productcomparison#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# =============================================================================
+# BRAND INDIVIDUALS
+# =============================================================================
+
+pc:Apple rdf:type pc:Brand .
+pc:Samsung rdf:type pc:Brand .
+pc:Google rdf:type pc:Brand .
+pc:Lenovo rdf:type pc:Brand .
+pc:OnePlus rdf:type pc:Brand .
+pc:Xiaomi rdf:type pc:Brand .
+pc:Motorola rdf:type pc:Brand .
+pc:Realme rdf:type pc:Brand .
+pc:Nokia rdf:type pc:Brand .
+pc:Dell rdf:type pc:Brand .
+pc:ASUS rdf:type pc:Brand .
+pc:HP rdf:type pc:Brand .
+pc:Acer rdf:type pc:Brand .
+
+# =============================================================================
+# CATEGORY INDIVIDUALS
+# =============================================================================
+
+pc:Electronics rdf:type pc:Category .
+pc:MobileDevices rdf:type pc:Category .
+pc:Computers rdf:type pc:Category .
+
+# =============================================================================
+# SMARTPHONE INDIVIDUALS (10 products)
+# =============================================================================
+
+pc:iPhone15Pro rdf:type pc:Smartphone ;
+    pc:hasName "iPhone 15 Pro" ;
+    pc:hasPrice "999.00"^^xsd:decimal ;
+    pc:hasRAM "8"^^xsd:integer ;
+    pc:hasStorage "256"^^xsd:integer ;
+    pc:hasProcessor "Apple A17 Pro" ;
+    pc:hasYear "2023"^^xsd:integer ;
+    pc:hasWeight "0.187"^^xsd:decimal ;
+    pc:hasScreenSize "6.1"^^xsd:decimal ;
+    pc:hasBatteryLife "23.0"^^xsd:decimal ;
+    pc:hasScore "78.3"^^xsd:decimal ;
+    pc:hasBrand pc:Apple .
+
+pc:SamsungGalaxyS24Ultra rdf:type pc:Smartphone ;
+    pc:hasName "Samsung Galaxy S24 Ultra" ;
+    pc:hasPrice "1299.00"^^xsd:decimal ;
+    pc:hasRAM "12"^^xsd:integer ;
+    pc:hasStorage "512"^^xsd:integer ;
+    pc:hasProcessor "Snapdragon 8 Gen 3" ;
+    pc:hasYear "2024"^^xsd:integer ;
+    pc:hasWeight "0.232"^^xsd:decimal ;
+    pc:hasScreenSize "6.8"^^xsd:decimal ;
+    pc:hasBatteryLife "27.0"^^xsd:decimal ;
+    pc:hasScore "82.1"^^xsd:decimal ;
+    pc:hasBrand pc:Samsung .
+
+pc:GooglePixel8 rdf:type pc:Smartphone ;
+    pc:hasName "Google Pixel 8" ;
+    pc:hasPrice "699.00"^^xsd:decimal ;
+    pc:hasRAM "8"^^xsd:integer ;
+    pc:hasStorage "128"^^xsd:integer ;
+    pc:hasProcessor "Google Tensor G3" ;
+    pc:hasYear "2023"^^xsd:integer ;
+    pc:hasWeight "0.187"^^xsd:decimal ;
+    pc:hasScreenSize "6.2"^^xsd:decimal ;
+    pc:hasBatteryLife "24.0"^^xsd:decimal ;
+    pc:hasScore "71.4"^^xsd:decimal ;
+    pc:hasBrand pc:Google .
+
+pc:OnePlus12 rdf:type pc:Smartphone ;
+    pc:hasName "OnePlus 12" ;
+    pc:hasPrice "799.00"^^xsd:decimal ;
+    pc:hasRAM "12"^^xsd:integer ;
+    pc:hasStorage "256"^^xsd:integer ;
+    pc:hasProcessor "Snapdragon 8 Gen 3" ;
+    pc:hasYear "2024"^^xsd:integer ;
+    pc:hasWeight "0.220"^^xsd:decimal ;
+    pc:hasScreenSize "6.7"^^xsd:decimal ;
+    pc:hasBatteryLife "22.0"^^xsd:decimal ;
+    pc:hasScore "74.8"^^xsd:decimal ;
+    pc:hasBrand pc:OnePlus .
+
+pc:Xiaomi14 rdf:type pc:Smartphone ;
+    pc:hasName "Xiaomi 14" ;
+    pc:hasPrice "699.00"^^xsd:decimal ;
+    pc:hasRAM "12"^^xsd:integer ;
+    pc:hasStorage "256"^^xsd:integer ;
+    pc:hasProcessor "Snapdragon 8 Gen 3" ;
+    pc:hasYear "2024"^^xsd:integer ;
+    pc:hasWeight "0.193"^^xsd:decimal ;
+    pc:hasScreenSize "6.36"^^xsd:decimal ;
+    pc:hasBatteryLife "18.0"^^xsd:decimal ;
+    pc:hasScore "70.2"^^xsd:decimal ;
+    pc:hasBrand pc:Xiaomi .
+
+pc:iPhone14 rdf:type pc:Smartphone ;
+    pc:hasName "iPhone 14" ;
+    pc:hasPrice "599.00"^^xsd:decimal ;
+    pc:hasRAM "6"^^xsd:integer ;
+    pc:hasStorage "128"^^xsd:integer ;
+    pc:hasProcessor "Apple A15 Bionic" ;
+    pc:hasYear "2022"^^xsd:integer ;
+    pc:hasWeight "0.172"^^xsd:decimal ;
+    pc:hasScreenSize "6.1"^^xsd:decimal ;
+    pc:hasBatteryLife "20.0"^^xsd:decimal ;
+    pc:hasScore "65.1"^^xsd:decimal ;
+    pc:hasBrand pc:Apple .
+
+pc:SamsungGalaxyA54 rdf:type pc:Smartphone ;
+    pc:hasName "Samsung Galaxy A54" ;
+    pc:hasPrice "449.00"^^xsd:decimal ;
+    pc:hasRAM "8"^^xsd:integer ;
+    pc:hasStorage "256"^^xsd:integer ;
+    pc:hasProcessor "Exynos 1380" ;
+    pc:hasYear "2023"^^xsd:integer ;
+    pc:hasWeight "0.202"^^xsd:decimal ;
+    pc:hasScreenSize "6.4"^^xsd:decimal ;
+    pc:hasBatteryLife "29.0"^^xsd:decimal ;
+    pc:hasScore "63.7"^^xsd:decimal ;
+    pc:hasBrand pc:Samsung .
+
+pc:MotorolaEdge40 rdf:type pc:Smartphone ;
+    pc:hasName "Motorola Edge 40" ;
+    pc:hasPrice "399.00"^^xsd:decimal ;
+    pc:hasRAM "8"^^xsd:integer ;
+    pc:hasStorage "256"^^xsd:integer ;
+    pc:hasProcessor "Dimensity 8020" ;
+    pc:hasYear "2023"^^xsd:integer ;
+    pc:hasWeight "0.167"^^xsd:decimal ;
+    pc:hasScreenSize "6.55"^^xsd:decimal ;
+    pc:hasBatteryLife "18.0"^^xsd:decimal ;
+    pc:hasScore "60.5"^^xsd:decimal ;
+    pc:hasBrand pc:Motorola .
+
+pc:Realme11ProPlus rdf:type pc:Smartphone ;
+    pc:hasName "Realme 11 Pro+" ;
+    pc:hasPrice "299.00"^^xsd:decimal ;
+    pc:hasRAM "8"^^xsd:integer ;
+    pc:hasStorage "256"^^xsd:integer ;
+    pc:hasProcessor "Dimensity 7050" ;
+    pc:hasYear "2023"^^xsd:integer ;
+    pc:hasWeight "0.180"^^xsd:decimal ;
+    pc:hasScreenSize "6.7"^^xsd:decimal ;
+    pc:hasBatteryLife "17.0"^^xsd:decimal ;
+    pc:hasScore "56.2"^^xsd:decimal ;
+    pc:hasBrand pc:Realme .
+
+pc:NokiaG42 rdf:type pc:Smartphone ;
+    pc:hasName "Nokia G42" ;
+    pc:hasPrice "199.00"^^xsd:decimal ;
+    pc:hasRAM "6"^^xsd:integer ;
+    pc:hasStorage "128"^^xsd:integer ;
+    pc:hasProcessor "Snapdragon 480+" ;
+    pc:hasYear "2023"^^xsd:integer ;
+    pc:hasWeight "0.193"^^xsd:decimal ;
+    pc:hasScreenSize "6.56"^^xsd:decimal ;
+    pc:hasBatteryLife "20.0"^^xsd:decimal ;
+    pc:hasScore "48.1"^^xsd:decimal ;
+    pc:hasBrand pc:Nokia .
+
+# =============================================================================
+# LAPTOP INDIVIDUALS (8 products)
+# =============================================================================
+
+pc:MacBookPro16M3Pro rdf:type pc:Laptop ;
+    pc:hasName "MacBook Pro 16 M3 Pro" ;
+    pc:hasPrice "2499.00"^^xsd:decimal ;
+    pc:hasRAM "18"^^xsd:integer ;
+    pc:hasStorage "512"^^xsd:integer ;
+    pc:hasProcessor "Apple M3 Pro" ;
+    pc:hasYear "2023"^^xsd:integer ;
+    pc:hasWeight "2.14"^^xsd:decimal ;
+    pc:hasScreenSize "16.2"^^xsd:decimal ;
+    pc:hasScore "91.2"^^xsd:decimal ;
+    pc:hasBrand pc:Apple .
+
+pc:DellXPS15 rdf:type pc:Laptop ;
+    pc:hasName "Dell XPS 15" ;
+    pc:hasPrice "1799.00"^^xsd:decimal ;
+    pc:hasRAM "32"^^xsd:integer ;
+    pc:hasStorage "1000"^^xsd:integer ;
+    pc:hasProcessor "Intel i9-13900H" ;
+    pc:hasYear "2023"^^xsd:integer ;
+    pc:hasWeight "1.86"^^xsd:decimal ;
+    pc:hasScreenSize "15.6"^^xsd:decimal ;
+    pc:hasScore "87.5"^^xsd:decimal ;
+    pc:hasBrand pc:Dell .
+
+pc:LenovoThinkPadX1Carbon rdf:type pc:Laptop ;
+    pc:hasName "Lenovo ThinkPad X1 Carbon" ;
+    pc:hasPrice "1599.00"^^xsd:decimal ;
+    pc:hasRAM "16"^^xsd:integer ;
+    pc:hasStorage "512"^^xsd:integer ;
+    pc:hasProcessor "Intel i7-1365U" ;
+    pc:hasYear "2023"^^xsd:integer ;
+    pc:hasWeight "1.12"^^xsd:decimal ;
+    pc:hasScreenSize "14.0"^^xsd:decimal ;
+    pc:hasScore "83.1"^^xsd:decimal ;
+    pc:hasBrand pc:Lenovo .
+
+pc:ASUSROGZephyrusG14 rdf:type pc:Laptop ;
+    pc:hasName "ASUS ROG Zephyrus G14" ;
+    pc:hasPrice "1299.00"^^xsd:decimal ;
+    pc:hasRAM "16"^^xsd:integer ;
+    pc:hasStorage "1000"^^xsd:integer ;
+    pc:hasProcessor "AMD R9-7940HS" ;
+    pc:hasYear "2023"^^xsd:integer ;
+    pc:hasWeight "1.65"^^xsd:decimal ;
+    pc:hasScreenSize "14.0"^^xsd:decimal ;
+    pc:hasScore "80.4"^^xsd:decimal ;
+    pc:hasBrand pc:ASUS .
+
+pc:HPSpectreX360 rdf:type pc:Laptop ;
+    pc:hasName "HP Spectre x360" ;
+    pc:hasPrice "1399.00"^^xsd:decimal ;
+    pc:hasRAM "16"^^xsd:integer ;
+    pc:hasStorage "512"^^xsd:integer ;
+    pc:hasProcessor "Intel i7-1355U" ;
+    pc:hasYear "2023"^^xsd:integer ;
+    pc:hasWeight "1.36"^^xsd:decimal ;
+    pc:hasScreenSize "14.0"^^xsd:decimal ;
+    pc:hasScore "79.8"^^xsd:decimal ;
+    pc:hasBrand pc:HP .
+
+pc:AcerSwift3 rdf:type pc:Laptop ;
+    pc:hasName "Acer Swift 3" ;
+    pc:hasPrice "749.00"^^xsd:decimal ;
+    pc:hasRAM "8"^^xsd:integer ;
+    pc:hasStorage "512"^^xsd:integer ;
+    pc:hasProcessor "AMD R5-7530U" ;
+    pc:hasYear "2023"^^xsd:integer ;
+    pc:hasWeight "1.25"^^xsd:decimal ;
+    pc:hasScreenSize "14.0"^^xsd:decimal ;
+    pc:hasScore "67.3"^^xsd:decimal ;
+    pc:hasBrand pc:Acer .
+
+pc:LenovoIdeaPadSlim5 rdf:type pc:Laptop ;
+    pc:hasName "Lenovo IdeaPad Slim 5" ;
+    pc:hasPrice "649.00"^^xsd:decimal ;
+    pc:hasRAM "16"^^xsd:integer ;
+    pc:hasStorage "512"^^xsd:integer ;
+    pc:hasProcessor "AMD R5-7530U" ;
+    pc:hasYear "2023"^^xsd:integer ;
+    pc:hasWeight "1.55"^^xsd:decimal ;
+    pc:hasScreenSize "15.6"^^xsd:decimal ;
+    pc:hasScore "65.8"^^xsd:decimal ;
+    pc:hasBrand pc:Lenovo .
+
+pc:AcerAspire3 rdf:type pc:Laptop ;
+    pc:hasName "Acer Aspire 3" ;
+    pc:hasPrice "449.00"^^xsd:decimal ;
+    pc:hasRAM "8"^^xsd:integer ;
+    pc:hasStorage "256"^^xsd:integer ;
+    pc:hasProcessor "AMD R3-7320U" ;
+    pc:hasYear "2023"^^xsd:integer ;
+    pc:hasWeight "1.78"^^xsd:decimal ;
+    pc:hasScreenSize "15.6"^^xsd:decimal ;
+    pc:hasScore "55.1"^^xsd:decimal ;
+    pc:hasBrand pc:Acer .
+
+# =============================================================================
+# OBJECT PROPERTY ASSERTIONS
+# =============================================================================
+
+# isBetterThan relationships
+pc:iPhone15Pro pc:isBetterThan pc:iPhone14 .
+pc:SamsungGalaxyS24Ultra pc:isBetterThan pc:SamsungGalaxyA54 .
+pc:MacBookPro16M3Pro pc:isBetterThan pc:AcerAspire3 .
+
+# isComparableTo relationships
+pc:iPhone15Pro pc:isComparableTo pc:SamsungGalaxyS24Ultra .
+pc:DellXPS15 pc:isComparableTo pc:MacBookPro16M3Pro .
