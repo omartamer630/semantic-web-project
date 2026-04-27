@@ -1,0 +1,179 @@
+@prefix pc: <http://www.semanticweb.org/productcomparison#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+#################################################################
+# Ontology
+#################################################################
+
+pc:Ontology rdf:type owl:Ontology .
+
+#################################################################
+# Classes
+#################################################################
+
+pc:Product rdf:type owl:Class .
+
+pc:Laptop rdf:type owl:Class ;
+    rdfs:subClassOf pc:Product .
+
+pc:Smartphone rdf:type owl:Class ;
+    rdfs:subClassOf pc:Product .
+
+pc:Brand rdf:type owl:Class .
+
+pc:Spec rdf:type owl:Class .
+
+#################################################################
+# Object Properties
+#################################################################
+
+pc:hasBrand rdf:type owl:ObjectProperty ;
+    rdfs:domain pc:Product ;
+    rdfs:range pc:Brand .
+
+pc:hasSpec rdf:type owl:ObjectProperty ;
+    rdfs:domain pc:Product ;
+    rdfs:range pc:Spec .
+
+#################################################################
+# Data Properties
+#################################################################
+
+pc:name rdf:type owl:DatatypeProperty ;
+    rdfs:domain pc:Product ;
+    rdfs:range xsd:string .
+
+pc:price rdf:type owl:DatatypeProperty ;
+    rdfs:domain pc:Product ;
+    rdfs:range xsd:decimal .
+
+pc:specName rdf:type owl:DatatypeProperty ;
+    rdfs:domain pc:Spec ;
+    rdfs:range xsd:string .
+
+pc:value rdf:type owl:DatatypeProperty ;
+    rdfs:domain pc:Spec ;
+    rdfs:range xsd:decimal .
+
+pc:unit rdf:type owl:DatatypeProperty ;
+    rdfs:domain pc:Spec ;
+    rdfs:range xsd:string .
+
+#################################################################
+# Brands (with labels for readable output)
+#################################################################
+
+pc:Apple rdf:type pc:Brand ; rdfs:label "Apple" .
+pc:Dell rdf:type pc:Brand ; rdfs:label "Dell" .
+pc:Acer rdf:type pc:Brand ; rdfs:label "Acer" .
+pc:Samsung rdf:type pc:Brand ; rdfs:label "Samsung" .
+pc:Realme rdf:type pc:Brand ; rdfs:label "Realme" .
+
+#################################################################
+# Products
+#################################################################
+
+# --- Laptops ---
+
+pc:AcerAspire3 rdf:type pc:Laptop ;
+    pc:name "Acer Aspire 3" ;
+    pc:price 449 ;
+    pc:hasBrand pc:Acer .
+
+pc:DellXPS15 rdf:type pc:Laptop ;
+    pc:name "Dell XPS 15" ;
+    pc:price 1799 ;
+    pc:hasBrand pc:Dell .
+
+pc:MacBookPro16M3Pro rdf:type pc:Laptop ;
+    pc:name "MacBook Pro 16 M3 Pro" ;
+    pc:price 2499 ;
+    pc:hasBrand pc:Apple .
+
+# --- Smartphones ---
+
+pc:Realme11ProPlus rdf:type pc:Smartphone ;
+    pc:name "Realme 11 Pro+" ;
+    pc:price 299 ;
+    pc:hasBrand pc:Realme .
+
+pc:SamsungGalaxyS24Ultra rdf:type pc:Smartphone ;
+    pc:name "Samsung Galaxy S24 Ultra" ;
+    pc:price 1299 ;
+    pc:hasBrand pc:Samsung .
+
+pc:iPhone14 rdf:type pc:Smartphone ;
+    pc:name "iPhone 14" ;
+    pc:price 599 ;
+    pc:hasBrand pc:Apple .
+
+#################################################################
+# Specs - LAPTOPS
+#################################################################
+
+# === Acer Aspire 3 ===
+pc:RAM_Acer rdf:type pc:Spec ; pc:specName "ram" ; pc:value 8 ; pc:unit "GB" .
+pc:Storage_Acer rdf:type pc:Spec ; pc:specName "storage" ; pc:value 256 ; pc:unit "GB" .
+pc:Screen_Acer rdf:type pc:Spec ; pc:specName "screen" ; pc:value 15.6 ; pc:unit "inch" .
+pc:Battery_Acer rdf:type pc:Spec ; pc:specName "battery" ; pc:value 7.5 ; pc:unit "hours" .
+pc:Weight_Acer rdf:type pc:Spec ; pc:specName "weight" ; pc:value 1.7 ; pc:unit "kg" .
+pc:CPU_Acer rdf:type pc:Spec ; pc:specName "cpu_cores" ; pc:value 6 ; pc:unit "cores" .
+
+pc:AcerAspire3 pc:hasSpec pc:RAM_Acer, pc:Storage_Acer, pc:Screen_Acer, pc:Battery_Acer, pc:Weight_Acer, pc:CPU_Acer .
+
+# === Dell XPS 15 ===
+pc:RAM_Dell rdf:type pc:Spec ; pc:specName "ram" ; pc:value 32 ; pc:unit "GB" .
+pc:Storage_Dell rdf:type pc:Spec ; pc:specName "storage" ; pc:value 1000 ; pc:unit "GB" .
+pc:Screen_Dell rdf:type pc:Spec ; pc:specName "screen" ; pc:value 15.6 ; pc:unit "inch" .
+pc:Battery_Dell rdf:type pc:Spec ; pc:specName "battery" ; pc:value 13 ; pc:unit "hours" .
+pc:Weight_Dell rdf:type pc:Spec ; pc:specName "weight" ; pc:value 2.0 ; pc:unit "kg" .
+pc:CPU_Dell rdf:type pc:Spec ; pc:specName "cpu_cores" ; pc:value 14 ; pc:unit "cores" .
+
+pc:DellXPS15 pc:hasSpec pc:RAM_Dell, pc:Storage_Dell, pc:Screen_Dell, pc:Battery_Dell, pc:Weight_Dell, pc:CPU_Dell .
+
+# === MacBook Pro 16 M3 Pro ===
+pc:RAM_MacBook rdf:type pc:Spec ; pc:specName "ram" ; pc:value 18 ; pc:unit "GB" .
+pc:Storage_MacBook rdf:type pc:Spec ; pc:specName "storage" ; pc:value 512 ; pc:unit "GB" .
+pc:Screen_MacBook rdf:type pc:Spec ; pc:specName "screen" ; pc:value 16.2 ; pc:unit "inch" .
+pc:Battery_MacBook rdf:type pc:Spec ; pc:specName "battery" ; pc:value 22 ; pc:unit "hours" .
+pc:Weight_MacBook rdf:type pc:Spec ; pc:specName "weight" ; pc:value 2.1 ; pc:unit "kg" .
+pc:CPU_MacBook rdf:type pc:Spec ; pc:specName "cpu_cores" ; pc:value 12 ; pc:unit "cores" .
+
+pc:MacBookPro16M3Pro pc:hasSpec pc:RAM_MacBook, pc:Storage_MacBook, pc:Screen_MacBook, pc:Battery_MacBook, pc:Weight_MacBook, pc:CPU_MacBook .
+
+#################################################################
+# Specs - SMARTPHONES
+#################################################################
+
+# === Realme 11 Pro+ ===
+pc:RAM_Realme rdf:type pc:Spec ; pc:specName "ram" ; pc:value 12 ; pc:unit "GB" .
+pc:Storage_Realme rdf:type pc:Spec ; pc:specName "storage" ; pc:value 512 ; pc:unit "GB" .
+pc:Screen_Realme rdf:type pc:Spec ; pc:specName "screen" ; pc:value 6.7 ; pc:unit "inch" .
+pc:Battery_Realme rdf:type pc:Spec ; pc:specName "battery" ; pc:value 17 ; pc:unit "hours" .
+pc:Weight_Realme rdf:type pc:Spec ; pc:specName "weight" ; pc:value 183 ; pc:unit "g" .
+pc:Camera_Realme rdf:type pc:Spec ; pc:specName "camera_mp" ; pc:value 200 ; pc:unit "MP" .
+
+pc:Realme11ProPlus pc:hasSpec pc:RAM_Realme, pc:Storage_Realme, pc:Screen_Realme, pc:Battery_Realme, pc:Weight_Realme, pc:Camera_Realme .
+
+# === Samsung Galaxy S24 Ultra ===
+pc:RAM_Samsung rdf:type pc:Spec ; pc:specName "ram" ; pc:value 12 ; pc:unit "GB" .
+pc:Storage_Samsung rdf:type pc:Spec ; pc:specName "storage" ; pc:value 256 ; pc:unit "GB" .
+pc:Screen_Samsung rdf:type pc:Spec ; pc:specName "screen" ; pc:value 6.8 ; pc:unit "inch" .
+pc:Battery_Samsung rdf:type pc:Spec ; pc:specName "battery" ; pc:value 27 ; pc:unit "hours" .
+pc:Weight_Samsung rdf:type pc:Spec ; pc:specName "weight" ; pc:value 232 ; pc:unit "g" .
+pc:Camera_Samsung rdf:type pc:Spec ; pc:specName "camera_mp" ; pc:value 200 ; pc:unit "MP" .
+
+pc:SamsungGalaxyS24Ultra pc:hasSpec pc:RAM_Samsung, pc:Storage_Samsung, pc:Screen_Samsung, pc:Battery_Samsung, pc:Weight_Samsung, pc:Camera_Samsung .
+
+# === iPhone 14 ===
+pc:RAM_iPhone rdf:type pc:Spec ; pc:specName "ram" ; pc:value 6 ; pc:unit "GB" .
+pc:Storage_iPhone rdf:type pc:Spec ; pc:specName "storage" ; pc:value 128 ; pc:unit "GB" .
+pc:Screen_iPhone rdf:type pc:Spec ; pc:specName "screen" ; pc:value 6.1 ; pc:unit "inch" .
+pc:Battery_iPhone rdf:type pc:Spec ; pc:specName "battery" ; pc:value 20 ; pc:unit "hours" .
+pc:Weight_iPhone rdf:type pc:Spec ; pc:specName "weight" ; pc:value 172 ; pc:unit "g" .
+pc:Camera_iPhone rdf:type pc:Spec ; pc:specName "camera_mp" ; pc:value 12 ; pc:unit "MP" .
+
+pc:iPhone14 pc:hasSpec pc:RAM_iPhone, pc:Storage_iPhone, pc:Screen_iPhone, pc:Battery_iPhone, pc:Weight_iPhone, pc:Camera_iPhone .
